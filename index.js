@@ -13,6 +13,21 @@ app.use(express.static(__dirname + '/public'));
 		console.log('/');
 	});
 
+
+
+
+	app.post('/login',function(request,response){
+		response.sendFile(path.join(__dirname ,'/public','entry.html'));
+		console.log('/login');
+	});
+
+
+
+	app.post('/homeScreen',function(request,response){
+		response.sendFile(path.join(__dirname ,'/public','homeScreen.html'));
+		console.log('/homescreen');
+	});
+
 app.listen(port,function(request,response){ 
 
 
